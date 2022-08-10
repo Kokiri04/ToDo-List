@@ -9,12 +9,6 @@
     --black: #0f0909;
 }
 
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Fira sans' sans-serif;
-} */
-
 body {
     display: flex;
     flex-direction: column;
@@ -39,6 +33,16 @@ header h1 {
 }
 
 .input-groupSearch {
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;    
+    color: white;
+    font-size: 0.1rem;
+    width: 300px;
+    margin-bottom: 3rem;
+}
+
+.input {
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;    
@@ -139,6 +143,7 @@ main {
     width: 100%;
     display: block;
     transition: 0.4s;
+    text-overflow: ellipsis;
 }
 
 #tasks .task .content .text:root(:root-only) {

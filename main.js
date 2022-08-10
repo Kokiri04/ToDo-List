@@ -76,6 +76,24 @@ window.addEventListener('load', () => { //Проверяем чтобы все �
             
         });
 
+        document.querySelector('#search').oninput = function() {
+            let val = this.value.trim();
+            let item = document.querySelectorAll('.task .text')
+            if (val != '') {
+                item.forEach(function(elem){
+                    if (elem.innerText.search(val) == -1) {
+                        elem.style.display = 'none';
+                    } else {
+                        elem.style.display = '';
+                    }
+                });
+            } else {
+                item.forEach(function(elem){
+                    elem.style.display = '';
+                });
+            }
+        }
+
     });
 
 });
